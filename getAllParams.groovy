@@ -3,9 +3,6 @@ import hudson.model.ParametersAction
 import jenkins.model.Jenkins
 
 for (Job job : Jenkins.instanceOrNull.getAllItems(Job.class)) {
-
-        println("------------------------------------------------")
-       
         def build = job.getBuilds().getLastBuild()
         def parameters = build?.getAllActions().find{ it instanceof ParametersAction }?.parameters
         if(parameters == null){
