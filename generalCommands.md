@@ -7,19 +7,33 @@
 * `GIT_COMMANDS`
 
   1. To checkout a remote branch:
+
         `git checkout —track origin/<branchName>`
+	
   2. Revert to  previous commit and push:
-  		  `git reset --hard <COMMIT_ID>.   And git push -f`
+	
+	`git reset --hard <COMMIT_ID>.   And git push -f`
+	
   3. Merge the remote changes
-		    `git merge origin/master`
+
+	`git merge origin/master`
+	
    4.	Delete local branch:
-  		  `git branch -d <branchName>`
+  	 
+	 `git branch -d <branchName>`
+	 
    5. Delete remote branch
-	  	  `git  push origin --delete test`
+	  
+	 `git  push origin --delete test`
+	  
    6. Git push from one branch to another remote branch
-		    `git push origin <from_branch>:<to_branch>`
+	
+	`git push origin <from_branch>:<to_branch>`
+	
    7. Checkout the tag
-  		  `git checkout 2.3.1 -b <Branch_Name>`
+  	
+	`git checkout 2.3.1 -b <Branch_Name>`
+	
    8. To kickstart with inclusive naming for repositories which has master as default branch.  
     ```
         git checkout master
