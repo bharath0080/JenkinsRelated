@@ -25,16 +25,20 @@
    5. Delete remote branch
 	  
 	 `git  push origin --delete test`
+
+   6. Delete remote branch with username and password
 	  
-   6. Git push from one branch to another remote branch
+	 `git push   "https://<username>:<password>@<url>"   --delete Test_1`
+	  
+   7. Git push from one branch to another remote branch
 	
 	`git push origin <from_branch>:<to_branch>`
 	
-   7. Checkout the tag
+   8. Checkout the tag
   	
 	`git checkout 2.3.1 -b <Branch_Name>`
 	
-   8. To kickstart with inclusive naming for repositories which has master as default branch.  
+   9. To kickstart with inclusive naming for repositories which has master as default branch.  
     ```
         git checkout master
         git branch -m master main
