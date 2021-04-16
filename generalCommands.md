@@ -48,3 +48,8 @@
         git symbolic-ref refs/remotes/origin/HEAD refs/remotes/origin/main
   
     ```
+* Remove all the docker images 
+ ```
+        docker rmi $(docker images -q)
+ ```
+    
