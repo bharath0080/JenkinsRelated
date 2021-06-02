@@ -29,8 +29,7 @@ Below is the files and their descrption for the files.
  - Make use of `hudson.util.Secret.decrypt()` function that Jenkins provides
  -  In Jenkins, go to: `<JENKINS_URL>/script` page.
     - Run the command: `println(hudson.util.Secret.decrypt("{XXX=}"))`
-      or:
-    -`println(hudson.util.Secret.fromString("{XXX=}").getPlainText())`
-          where `{XXX=}` is your encrypted password. This will print the plain password.
+    - `println(hudson.util.Secret.fromString("{XXX=}").getPlainText())`
+      where `{XXX=}` is your encrypted password. This will print the plain password.
     - To do opposite, run:
       `println(hudson.util.Secret.fromString("some_text").getEncryptedValue())`
