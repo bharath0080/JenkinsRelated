@@ -7,6 +7,7 @@ Below is the files and their descrption for the files.
 - deleteJobs.groovy
 - getAllParams.groovy
 - getJobParamsJenkinsFile.groovy
+- lockBranchJob.groovy
 
 ### deleteJobs.groovy
 
@@ -23,6 +24,11 @@ Below is the files and their descrption for the files.
 
 - Similar to the above `getAllParams.groovy` script, this `Jenkinsfile` prints the paramters( i.e. paraters in smiple terms implies the `parameters` in the Jenkins job)
 - This is not a `freestyle` job but a `pipeline` job type.
+
+### lockBranchJob.groovy
+- For multi-branch pipeline in Jenkins, if we want to disable the parallel execution of multiple branch jobs, we can make you use of `LockableResourcesManager` in Jenkins.
+- Install the plugin [lockable-resources](https://plugins.jenkins.io/lockable-resources/)
+- `lockBranchJob.groovy` provides example the usage of same. We can code a little bit more to fail/abort the build which is trying to build when an another build is in-progress.
 
 ### get the password/decrypt the password from credentials.xml
  - Get the encrypted text from the `credentials.xml`
