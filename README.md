@@ -1,6 +1,6 @@
 # JenkinsRelated
 
-This repo is related to Jenkins and Jenkinsfiles ( And is still under developement of adding more groovy scripts )
+This repo is related to Jenkins and Jenkinsfiles ( And is still under developement of adding more groovy scripts, general Linux,GIT commands amd many more )
 
 Below is the files and their descrption for the files.
 
