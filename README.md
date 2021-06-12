@@ -4,15 +4,15 @@ This repo is related to Jenkins and Jenkinsfiles ( And is still under developeme
 
 Below is the files and their descrption for the files.
 
-- deleteJobs.groovy
-- getAllParams.groovy
-- getJobParamsJenkinsFile.groovy
-- lockBranchJob.groovy
-- gitCommands.md
+- [deleteJobs.groovy](https://github.com/bharath0080/JenkinsRelated#deletejobsgroovy)
+- [getAllParams.groovy](https://github.com/bharath0080/JenkinsRelated#getallparamsgroovy)
+- [getJobParamsJenkinsFile.groovy](https://github.com/bharath0080/JenkinsRelated#getjobparamsjenkinsfilegroovy)
+- [lockBranchJob.groovy](https://github.com/bharath0080/JenkinsRelated#lockbranchjobgroovy)
+- [gitCommands.md](https://github.com/bharath0080/JenkinsRelated/blob/master/gitCommands.md)
   - Basic GIT commands
-- generalCommands.md
+- [generalCommands.md](https://github.com/bharath0080/JenkinsRelated/blob/master/generalCommands.md)
   - General useful commands in day-to-day activities.
-- dockerCommands.md
+- [dockerCommands.md](https://github.com/bharath0080/JenkinsRelated/blob/master/generalCommands.md)
   - Basic docker commands
 
 ### deleteJobs.groovy
