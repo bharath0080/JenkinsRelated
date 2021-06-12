@@ -8,6 +8,12 @@ Below is the files and their descrption for the files.
 - getAllParams.groovy
 - getJobParamsJenkinsFile.groovy
 - lockBranchJob.groovy
+- gitCommands.md
+  - Basic GIT commands
+- generalCommands.md
+  - General useful commands in day-to-day activities.
+- dockerCommands.md
+  - Basic docker commands
 
 ### deleteJobs.groovy
 
