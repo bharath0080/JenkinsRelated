@@ -1,0 +1,31 @@
+import java.text.*;
+pipeline {
+    agent any
+
+    stages {
+        stage('Hello') {
+            steps {
+                script{
+                    String input = "2021-09-30T17:46:46Z";
+                    String format = "yyyy-MM-dd'T'HH:mm:ss'Z'"
+                    date1 = new SimpleDateFormat(format).parse(input).getTime()
+                    
+                    input1 = "2021-10-07T16:59:51Z"
+                    format1 = "yyyy-MM-dd'T'HH:mm:ss'Z'"
+                    
+                    date2 =   new SimpleDateFormat(format1).parse(input1).getTime()
+                    
+                    difference = date2 - date1
+                    
+                    long seconds = difference / 1000;
+                    long minutes = seconds / 60;
+                    long hours = minutes / 60;
+                    long days = hours / 24;
+                    String time = days + ":" + hours % 24 + ":" + minutes % 60 + ":" + seconds % 60;
+                    
+                    println time
+                }
+            }
+        }
+    }
+}
