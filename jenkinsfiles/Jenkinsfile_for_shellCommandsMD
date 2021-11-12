@@ -1,0 +1,17 @@
+pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                script{
+                    stringName="Release-Prod-1.0.0-12.5.0"
+                    value=sh (
+                    script: """
+                        echo ${stringName} | awk -F"-" '{ for (i=1; i<=NF; i++) if( \$i~/^[0-9]/) printf "%s-", \$i}' | sed 's/-\$//'
+                    """, returnStdout: true ).trim()
+                    println value
+                }
+            }
+        }
+    }
+}
