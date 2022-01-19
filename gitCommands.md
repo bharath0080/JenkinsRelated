@@ -32,7 +32,11 @@
   	
 	`git checkout 2.3.1 -b <Branch_Name>`
 	
-   9. To kickstart with inclusive naming for repositories which has master as default branch.  
+   9. Check the commits of a single file
+   
+   	`git log --follow -- filename`
+	
+   10. To kickstart with inclusive naming for repositories which has master as default branch.  
     ```
         git checkout master
         git branch -m master main
