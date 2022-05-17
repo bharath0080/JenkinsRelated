@@ -15,8 +15,8 @@ pipeline {
                     writeCSV file : 'test.csv', records : newList
                     def csvContent = readCSV file : 'test.csv', format: CSVFormat.DEFAULT.withHeader()
                     for (CSVRecord record : csvContent) {
-						//println record.size()
-						println record.get('Name')  
+			//println record.size()
+			println record.get('Name')  
                     }
                 }
             }
