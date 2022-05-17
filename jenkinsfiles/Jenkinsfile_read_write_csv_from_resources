@@ -1,0 +1,25 @@
+@Library('testing_csv@master') _
+pipeline {
+    agent any
+    stages {
+        stage('Hello') {
+            steps {
+                echo 'Hello World'
+                script{
+                    def resourcesContent = libraryResource 'test.csv'
+                    List<String> list = Arrays.asList(resourcesContent.split("\n"));
+                    def newList = []
+                    list.each {
+                        newList.add(it.split(","))
+                    }
+                    writeCSV file : 'test.csv', records : newList
+                    def csvContent = readCSV file : 'test.csv', format: CSVFormat.DEFAULT.withHeader()
+                    for (CSVRecord record : csvContent) {
+						//println record.size()
+						println record.get('Name')  
+                    }
+                }
+            }
+        }
+    }
+}
