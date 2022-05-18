@@ -1,0 +1,31 @@
+@Library('testing_csv@master') _
+
+pipeline {
+    agent any
+
+    stages {
+        stage('Hello') {
+            steps {
+                echo 'Hello World'
+                //git 'https://github.com/bharath0080/new-proj1.git'
+                script{
+                    def resourcesContent = libraryResource 'test.csv'
+                    List<String> list = Arrays.asList(resourcesContent.split("\n"));
+                    def newList = []
+                    list.each {
+                        newList.add(it.split(","))
+                    }
+                    writeCSV file : 'test.csv', records : newList
+                    def csvContent = readCSV file : 'test.csv'//, format: CSVFormat.DEFAULT.withHeader()
+                    println csvContent.size()
+                    println csvContent[0].size()
+                    for(int i=0 ; i < csvContent.size() ; i++){
+                        for(int j=0 ; j < csvContent[0].size() ; j++){
+                            config.put(csvContent[0][j],csvContent[i][j])
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
